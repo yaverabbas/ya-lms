@@ -1,4 +1,4 @@
-# YA-LMS (Learning Management System in PHP + MySQL)
+# YA-LMS (MVP Learning Management System in PHP + MySQL)
 
 **YA-LMS** is a simple Learning Management System (LMS) designed to allow users to easily browse, enroll, and track courses and lessons. It provides a straightforward interface for managing learning content, built with PHP, MySQL, and modern web technologies.
 
