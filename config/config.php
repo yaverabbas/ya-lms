@@ -19,8 +19,8 @@ if (!ini_get('log_errors')) {
 // Database configuration
 const DB_HOST = 'localhost';
 const DB_NAME = 'db_ya_lms';
-const DB_USER = 'yvcmer';  // Replace with your MySQL username
-const DB_PASS = 'u1%F$IV^rxK89QYg0cp61(D7';  // Replace with your MySQL password
+const DB_USER = 'test';  // Replace with your MySQL username
+const DB_PASS = 'test';  // Replace with your MySQL password
 const HEADER_FILE_PATH = ROOT_PATH . '/includes/header.php'; // Header file path
 const FOOTER_FILE_PATH = ROOT_PATH . '/includes/footer.php'; // Footer file path
 const DB_FILE_PATH = ROOT_PATH . '/config/db.php'; // Database file path
