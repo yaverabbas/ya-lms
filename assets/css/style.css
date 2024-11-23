@@ -1,0 +1,464 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, ol, li, a, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Light", sans-serif;
+    text-decoration: none;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default */
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #0056b3;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        display: none; /* Hidden by default */
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex; /* Display menu when toggled */
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+
+    .nav-toggle {
+        display: block; /* Visible on smaller screens */
+    }
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Footer Styling */
+footer {
+    background: #f3f4f6;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+}
+
+/* Footer Text */
+footer p {
+    margin: 0;
+}
+
+/* Responsive Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Full height minus header and footer */
+}
+
+.container > div {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+div.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    padding: 150px;
+}
+
+.welcome h1 {
+    font-size: 2rem;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+}
+
+.welcome .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.welcome .actions a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+div.login-form,
+div.registration-form {
+    width: auto;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column; /* Vertically stack inputs */
+    gap: 1rem; /* Space between fields */
+    align-items: stretch; /* Ensure inputs fill the form width */
+    margin: 20px 0;
+}
+
+/* Input Styling */
+input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+div.my-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: none;
+}
+
+div.my-courses a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin: 10px 0;
+}
+
+li a.enrolled-course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007bff54;
+    color: #000076;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.my-courses a.drop-course {
+    background: #dc3545;
+    height: 50px;
+}
+
+div.my-courses li a:hover, div.my-courses a.drop-course:hover {
+    background: transparent;
+    border: 1px solid #007bff;
+    text-decoration: none;
+}
+
+.my-courses li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 150px;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Registration Prompt Styling */
+.register-prompt {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.register-prompt a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* General container for course cards */
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjust number of columns */
+    gap: 20px; /* Space between cards */
+    width: 100%;
+    margin: 50px 0;
+}
+
+/* Styling for each course card */
+ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 150px;
+}
+
+/* Hover effect for course cards */
+ul li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Course title styling */
+ul li h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Link styling for course titles */
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Course description (optional) */
+ul li p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Button styling for enrolling */
+ul li form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+ul li button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+    background-color: #218838;
+}
+
+/* Styling for "No courses available" message */
+.container p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+li.lessons-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: none;
+    border: 1px solid black;
+    transition: none;
+}
+
+li.lessons-list:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+h3.single-course-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100px;
+    padding: 20px 5px;
+}
+
+p.single-course-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 1024px) {
+    /* On medium-sized screens, show up to 3 cards per row */
+    ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* On smaller screens, show up to 2 cards per row */
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* On very small screens, show only 1 card per row */
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Success and Error Messages */
+.success, .error {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Style for success message */
+.success.message {
+    box-shadow: none;
+    border: none;
+}
+
+.success.message p {
+    background-color: rgb(176 239 178 / 49%); /* Green background */
+    color: #067400; /* White text */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: none;
+}
+
